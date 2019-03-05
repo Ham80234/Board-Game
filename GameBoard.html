@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+ 
+grid-template-columns:125px 250px 250px 250px 250px;
+ grid-template-rows:125px 250px  250px  250px  250px;
+ 
+
+ 
+ 
+}
+.odd{
+    background-image:  url("Images/odd.jpg");
+    width :25%;
+    height: 25%;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  }
+  .even{
+    background-image:  url("Images/even.jpg");
+    width :25%;
+    height: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  }
+.grid-item {
+  /*background-color: rgba(255, 255, 255, 0.8)*/
+ 
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  }
+  
+</style>
+</head>
+<body>
+
+<h1>Grid Elements</h1>
+
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+<div class="grid-container">
+  <div class="odd">1</div>
+  <div class="even">2</div>
+  <div class="odd">3</div>
+  <div class="even">4</div>
+
+  <div class="even">5</div>
+  <div class="odd">6</div>
+  <div class="even">7</div>
+  <div class="odd">7</div>
+
+  <div class="odd">9</div>
+  <div class="even">10</div>
+  <div class="odd">11</div>
+  <div class="even">12</div>
+
+  <div class="even">13</div>
+  <div class="odd">14</div>
+  <div class="even">15</div>
+  <div class="odd">16</div>
+ 
+ 
+  
+ 
+  
+</div>
+
+</body>
+</html>

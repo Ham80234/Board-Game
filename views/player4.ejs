@@ -1,0 +1,163 @@
+<!---
+Team Brogrammners :- Andrew Hamett,Cole Snyder,Siddhant Grover,Steven Mcvicker
+Project Description:A fully functional 4 player Board Game with the motive to turn each individual 
+player's row green.
+Class:CS 410 Software Engineering
+Professor :Sudershan Iyengar
+Date Due:3/3/2019
+Player View :-The view/user interface each player sees
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Board Game</title>
+    <link rel='stylesheet' href='/stylesheets/app.css' type="text/css" /><!--connects page to the css stylesheet-->
+    <link rel="icon" href="icon.png"><!--connects sheet t0pictue-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"><!--connects sheet to stylesheets-->
+</head>
+<body>
+    <header> <!---heading of page-->
+        <h2>THE BROGRAMMERS BOARD GAME</h2>
+        <h2 class="playerIndicator">Player 4</h2>
+    </header>
+
+    <main>
+        <div class="grid-container1"><!-- body of the page is structured as a grid-->
+            <div class="grid-item"><!----part of page that has player wins,hold player numbers ,etc.-->
+                <div id="stats">
+
+                    <div id="users-numbers">
+                        <p id="selecting"> Player <span id="span">1</span> selecting </p>
+                        <div><!--ball animation-->
+                            <div id="ball1" class="ball"></div>
+                            <div id="ball2" class="ball"></div>
+                            <div id="ball3" class="ball"></div>
+                        </div>
+                    </div>
+
+                    <div id="selected-num">
+                        <p id="current-player"> Player <u><span id="Player">1</span></u> selected: </p>
+                        <p id="current-num"> </p>
+                    </div>
+                    <div id="wins">
+                        <hr>
+                        <h2>Scoreboard</h2>
+                        <div id="match-number">
+                            <p> Match number:</p>
+                            <p> <strong>1</strong> </p>
+                        </div>
+                         <!--Player points-->
+                        <p id="p1Wins"> Player 1 Points: <span id="PointsPlayer1">0</span></p>
+                        <p id="p2wins"> Player 2 Points: <span id="PointsPlayer2">0</span></p>
+                        <p id="p3Wins"> Player 3 Points: <span id="PointsPlayer3">0</span></p>
+                        <p id="p4wins"> Player 4 Points: <span id="PointsPlayer4">0</span></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid-item"><!---The game board ,ie board divided into rows and columns for each playe-->
+
+                <p class="pTop">P1 P2 P3 P4 </p>
+
+                <p class="plabel">P1</p>
+                <p class="plabel">P2</p>
+                <p class="plabel">P3</p>
+                <p class="plabel" style="padding-bottom: 10px;">P4</p>
+
+                <div class="grid-container">
+<!--each part of board given individual id so that it can be accessed throuGJ the DOM-->
+                    <div class="even" id="p1p1">
+
+                    </div>
+                    <div class="odd" id="p1p2">
+
+                    </div>
+                    <div class="even" id="p1p3">
+
+                    </div>
+                    <div class="odd" id="p1p4">
+
+                    </div>
+
+                    <div class="odd" id="p2p1">
+
+                    </div>
+                    <div class="even" id="p2p2">
+
+                    </div>
+                    <div class="odd" id="p2p3">
+
+                    </div>
+                    <div class="even" id="p2p4">
+
+                    </div>
+
+                    <div class="even" id="p3p1">
+
+                    </div>
+                    <div class="odd" id="p3p2">
+
+                    </div>
+                    <div class="even" id="p3p3">
+
+                    </div>
+                    <div class="odd" id="p3p4">
+
+                    </div>
+
+                    <div class="odd" id="p4p1">
+
+                    </div>
+                    <div class="even" id="p4p2">
+
+                    </div>
+                    <div class="odd" id="p4p3">
+
+                    </div>
+                    <div class="even" id="p4p4">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-grid"><!--grid that holds the individual number buttons and functions added to each button as well as id to
+                    identify who clicked the button -->
+                    <div class="playerNumbers" id="P4-1" onclick='selectNumber(4, 1)'>1</div>
+                    <div class="playerNumbers" id="P4-2" onclick='selectNumber(4, 2)'>2</div>
+                    <div class="playerNumbers" id="P4-3" onclick='selectNumber(4, 3)'>3</div>
+                    <div class="playerNumbers" id="P4-4" onclick='selectNumber(4, 4)'>4</div>
+                    <div class="playerNumbers" id="P4-5" onclick='selectNumber(4, 5)'>5</div>
+                    <div class="playerNumbers" id="P4-6" onclick='selectNumber(4, 6)'>6</div>
+                    <div class="playerNumbers" id="P4-7" onclick='selectNumber(4, 7)'>7</div>
+                    <div class="playerNumbers" id="P4-8" onclick='selectNumber(4, 8)'>8</div>
+                    <div class="playerNumbers" id="P4-9" onclick='selectNumber(4, 9)'>9</div>
+                    <div class="playerNumbers" id="P4-10" onclick='selectNumber(4, 10)'>10</div>
+                    <div class="playerNumbers" id="P4-11" onclick='selectNumber(4, 11)'>11</div>
+                    <div class="playerNumbers" id="P4-12" onclick='selectNumber(4, 12)'>12</div>
+                    <div class="playerNumbers" id="P4-13" onclick='selectNumber(4, 13)'>13</div>
+                    <div class="playerNumbers" id="P4-14" onclick='selectNumber(4, 14)'>14</div>
+                    <div class="playerNumbers" id="P4-15" onclick='selectNumber(4, 15)'>15</div>
+                    <div class="playerNumbers" id="P4-16" onclick='selectNumber(4, 16)'>16</div>
+                    <div class="playerNumbers" id="P4-17" onclick='selectNumber(4, 17)'>17</div>
+                    <div class="playerNumbers" id="P4-18" onclick='selectNumber(4, 18)'>18</div>
+                    <div class="playerNumbers" id="P4-19" onclick='selectNumber(4, 19)'>19</div>
+                    <div class="playerNumbers" id="P4-20" onclick='selectNumber(4, 20)'>20</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+     <!---add the required scripts at the end after the page loads-->
+    <script>
+        var Name = "P4";
+        var ID = 4
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="data.js"></script> -->
+    <script src="connection.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+body {
+    background-color: antiquewhite;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 40px;
+    margin-left: 20px;
+    vertical-align: bottom;
+    float: left;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+  text-align: left;
+}
+
+#current-num {
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+    /* since button is a built in css variable, put all styling for irregular buttons(like join)
+    as their own item in css. I did this by adding a joinGameButton id and put all unique styling in there. */
+}
+
+#joinGameButton {
+    top :50px;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color:orange;
+    color: #444;
+    margin-top: 100%;
+    display: flex;
+    font-size: 1em;
+    justify-content: center;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+#joinGameButton:hover {
+  cursor: pointer;
+  background-color: #fcad1b;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1%;
+}
+
+main {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.grid-container-index {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-size: 2em;
+}
+
+.grid-item-index {
+  padding: 10px;
+  font-size: .6em;
+  text-align: center;
+}
+
+
+.playerIndicator {
+  float: right;
+  margin-right: 20px;
+}
+
+.grid-container1 {
+  background-image:  url("./Images/wood-background.jpg");
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#stats
+{
+  font-size: 20px;
+}
+
+#output {
+  width: 200px;
+  background-color: black;
+  color: white;
+}
+
+#board {
+    display: grid;
+    grid-template-rows: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 2fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.grid-container {
+    display:  inline-grid;
+    align-self: center;
+    grid-template-columns:  125px 125px 125px 125px;
+    grid-template-rows: 125px  125px  125px  125px;
+    padding-top: 2%;
+    width: 550px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .playergrid {
+    display:  inline-grid;
+    grid-template-columns: 125px;
+    grid-template-rows:  125px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+  .odd {
+    background-image:  url("./Images/odd.jpg");
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .even {
+    background-image:  url("./Images/even.jpg");
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 12px;
+    font-size: 30px;
+    text-align: center;
+    display:table-cell;
+    vertical-align:middle;
+  }
+
+  .number-grid
+  {
+    display: inline-grid;
+    align-self: center;
+    grid-template-columns: 75px 75px;
+    grid-template-rows:  55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    margin: auto;
+    font-size: 10px;
+  }
+
+  .playerNumbers {
+    background-color: #ffa342;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .playerNumbers:hover {
+    cursor: pointer;
+    background-color: #ffaf5b;
+  }
+.plabel{
+    float: left;
+    clear:both;
+    padding-bottom: 45px;
+}
+.pTop
+{
+  word-spacing: 90px;
+  margin: 3px;
+}
+header {
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 1%;
+}
+.grid-container1 {
+  background-image:  url("./Images/wood-background.jpg");
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.rules{
+  background-image:  url("./Images/wood-background.jpg");
+  border: 2px solid black;
+}
+.transbox {
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox ul {
+  font-weight: bold;
+  color: #000000;
+}
+
+.labelBox {
+  background-color: #FAE3BF;
+}
+
+#waitBox {
+  display: inline;
+}
+
+#waitMessage {
+  margin-top: 30%;
+  text-align: center;
+}
+
+#selecting {
+  float: left;
+}
+
+#ball1 {
+  margin-right: 0%;
+}
+
+#ball2 {
+  animation-delay: 40ms;
+  margin-right: 1.5%;
+}
+
+#ball3 {
+  animation-delay: 80ms;
+  margin-right: 2%;
+}
+
+#users-numbers {
+  display: inline;
+}
+
+/************************************** KEYFRAME AND ANIMATIONS ******************************************/
+
+.ball {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: black;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  float: right;
+  margin-top: 14%;
+}
+
+@keyframes bounce{
+  from { transform: translate3d(0, 0, 0);}
+  to   { transform: translate3d(0, 5px, 0);}
+}

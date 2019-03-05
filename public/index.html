@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Board Game</title>
+    <link rel='stylesheet' href='/stylesheets/app.css' type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+    <link rel="icon" href="icon.png">
+  </head>
+  <body>
+      <header>
+        <h2>THE BROGRAMMERS BOARD GAME</h2>
+      </header>
+
+
+      <div class="grid-container-index">
+        <div class="grid-item-index">
+
+
+          <div class="rules">
+            <div class = "transbox">
+           <h4> The Game</h4>
+           <ul>
+             <li> There are 4 players. Players are named P1, P2, P3, and P4. The players are on three different machines.</li>
+             <li> Each player is given set of 3 numbers chosen randomly – in the range [1 – 20].</li>
+             <li>Each player knows their numbers – but must guess other players numbers.</li>
+             <li>Players take turn in a cycle. During the turn the player adds a number to his/her set.</li>
+             <li> There is a 4 by 4 grid of dots. These dots are red or green.</li>
+            <li> A dot is green when the player represented in the row holds numbers that is a superset of number held by player represented by the column. Otherwise, the dot is red.</li>
+           </ul>
+          <h4> How the Game Works</h4>
+           <ul>
+            <li>A new game starts with numbers are randomly created and assigned players.</li>
+            <li> The board is updated after a player has played.</li>
+            <li> A game ends with a winner when a player has all the dots green on their row. <ul>
+              <li> The winner is assigned a point score – which is the numbers added during the game</li>
+              <li> The other players are assigned 10 points.</li>
+              <li>A new game is started.</li>
+            </ul></li>
+            <li> A match is a series of 10 games. The winner of the match is the player with the lowest number of points.</li>
+            <li>If there is a tie in the number of points, then the player who wins the greatest number of games wins the match.</li>
+            <li>  If there is still a tie – then there is no winner.</li>
+           </ul>
+          </div>
+          </div>
+
+
+        </div>
+
+         <div class="grid-item-index">
+
+            <button id="joinGameButton" type="button">Join Game Lobby</button> <!----button giving a width error-->  </div>
+
+        </div>
+
+
+
+      <!-- <input type="text" id="message">  -->
+      <div id="output"></div>
+    <!--    <div id="waitingBox">
+        <h1 id="waitMessage">WAITING FOR OTHER PLAYERS TO JOIN </h1>
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+        <div id="ball3" class="ball"></div>
+        <div id="queueOutput"></div>
+    </div>
+      <div id="queueOutput"></div>
+  -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/connection.js"></script>
+  </body>
+</html>
