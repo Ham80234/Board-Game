@@ -2,7 +2,7 @@
 
 How to run 
 
-Prereqrements 
+Prereqs
 
 1. Node.js installed 
 
